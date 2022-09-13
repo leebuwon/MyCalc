@@ -3,6 +3,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MyCalculator {
+
+    private int total1 = 0;
+    private int total2 = 0;
+    private char math_operator;
+
     private JPanel MyCalculator;
     private JTextField textField1;
     private JButton Button1;
@@ -15,12 +20,18 @@ public class MyCalculator {
     private JButton Button8;
     private JButton Button9;
     private JButton Button0;
-    private JButton Button11;
-    private JButton Button12;
-    private JButton Button13;
-    private JButton Button14;
-    private JButton Button15;
+    private JButton ButtonPlus;
+    private JButton ButtonMinus;
+    private JButton ButtonMutiple;
+    private JButton ButtonDivde;
+    private JButton ButtonResult;
     private JButton clearButton;
+
+    private void getOperator (String btnText){
+        math_operator = btnText.charAt(0);
+        total1 = total1 + Integer.parseInt(textField1.getText());
+        textField1.setText("");
+    }
 
     public MyCalculator() {
         Button1.addActionListener(new ActionListener() {
@@ -100,6 +111,70 @@ public class MyCalculator {
             public void actionPerformed(ActionEvent e) {
                 String button1Text = textField1.getText() + Button0.getText();
                 textField1.setText(button1Text);
+            }
+        });
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                total2 = 0;
+                textField1.setText("");
+
+            }
+        });
+
+        ButtonResult.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                switch(math_operator){
+                    case '+':
+                        total2 = total1 + Integer.parseInt(textField1.getText());
+                        break;
+                    case '-':
+                        total2 = total1 - Integer.parseInt(textField1.getText());
+                        break;
+                    case '*':
+                        total2 = total1 * Integer.parseInt(textField1.getText());
+                        break;
+                    case '/':
+                        total2 = total1 / Integer.parseInt(textField1.getText());
+                        break;
+                }
+
+                textField1.setText(Integer.toString(total2));
+                total1 = 0;
+            }
+        });
+
+        ButtonPlus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String button_text = ButtonPlus.getText();
+                getOperator(button_text);
+            }
+        });
+
+        ButtonMinus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String button_text = ButtonMinus.getText();
+                getOperator(button_text);
+            }
+        });
+
+        ButtonMutiple.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String button_text = ButtonMutiple.getText();
+                getOperator(button_text);
+            }
+        });
+
+        ButtonDivde.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String button_text = ButtonDivde.getText();
+                getOperator(button_text);
             }
         });
     }

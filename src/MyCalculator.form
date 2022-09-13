@@ -98,7 +98,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="d1aae" class="javax.swing.JButton" binding="Button12">
+      <component id="d1aae" class="javax.swing.JButton" binding="ButtonMinus">
         <constraints>
           <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -107,7 +107,7 @@
           <text value="-"/>
         </properties>
       </component>
-      <component id="8f5a4" class="javax.swing.JButton" binding="Button14">
+      <component id="8f5a4" class="javax.swing.JButton" binding="ButtonDivde">
         <constraints>
           <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -116,7 +116,7 @@
           <text value="/"/>
         </properties>
       </component>
-      <component id="3ef52" class="javax.swing.JButton" binding="Button15">
+      <component id="3ef52" class="javax.swing.JButton" binding="ButtonResult">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -125,7 +125,7 @@
           <text value="="/>
         </properties>
       </component>
-      <component id="8d627" class="javax.swing.JButton" binding="Button11">
+      <component id="8d627" class="javax.swing.JButton" binding="ButtonPlus">
         <constraints>
           <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -134,7 +134,7 @@
           <text value="+"/>
         </properties>
       </component>
-      <component id="43c07" class="javax.swing.JButton" binding="Button13">
+      <component id="43c07" class="javax.swing.JButton" binding="ButtonMutiple">
         <constraints>
           <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
